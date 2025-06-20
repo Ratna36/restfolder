@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symptom Checker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-8">
+  <nav class="bg-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4">
+     <div class="flex justify-between">
+      <div class="flex space-x-7">
+       <div>
+        <a class="flex items-center py-4 px-2" href="#">
+         <img alt="Logo of the telemedicine website, a stylized cross with a stethoscope" class="h-8 w-8 mr-2" height="50" src="https://storage.googleapis.com/a1aa/image/dXKT1egf7brudUqzOvewyU0HtS2f18qOn4gmYPlrGspGdNFQB.jpg" width="50"/>
+         <span class="font-semibold text-gray-500 text-lg">
+          Symptoms checker
+         </span>
+        </a>
+       </div>
+       <div class="hidden md:flex items-center space-x-1">
+        <a class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold" href="dash.html">
+         Home
+        </a>
+        <a class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300" href="telemed.html">
+         Doctors
+        </a>
+       </div>
+      </div>
+      <div class="md:hidden flex items-center">
+       <button class="outline-none mobile-menu-button">
+        <i class="fas fa-bars">
+        </i>
+       </button>
+      </div>
+     </div>
+    </div>
+   </nav>
+   <div class="hidden mobile-menu">
+    <ul class="">
+     <li>
+      <a class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold" href="dash.html">
+       Home
+      </a>
+     </li>
+     <li>
+      <a class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300" href="#">
+       Services
+      </a>
+     </li>
+     <li>
+      <a class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300" href="telemed.html">
+       Doctors
+      </a>
+     </li>
+    </ul>
+   </div>
+   <div class="w-full h-80">
+    <div class="relative w-full h-full">
+      <img class="w-full h-full object-cover" src="nexti.jpeg" />
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+      <div class="absolute inset-0 flex items-center justify-center text-white text-3xl font-bold">
+        Welcome to the Symptom Checker
+    </div>
+  <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg object-bottom ">
+    <h1 class="text-3xl font-bold mb-6 text-center text-blue-600">Symptom Checker</h1>
+    <p class="text-gray-600 text-center mb-6"> Enter a symptom to get recommendations.</p>
+
+
+    <!-- Results Section -->
+    <div id="results" class="mt-6 hidden">
+      <h2 class="text-xl font-semibold mb-4 text-green-600">Results:</h2>
+      <p id="symptoms-experienced" class="text-gray-700"></p>
+      <p id="total-symptoms" class="mt-2 font-bold"></p>
+      <p id="recommendation" class="mt-4 text-lg text-blue-700"></p>
+    </div>
+
+    <!-- Symptom Input Section -->
+    <section class="mt-8">
+      <h2 class="text-xl font-semibold mb-4">Enter a Symptom:</h2>
+      <div id="symptomForm" class="flex items-center space-x-4">
+        <input type="text" id="symptomInput" placeholder="Type a symptom..." class="flex-1 border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <button onclick="checkSymptom()" id="check-symptoms" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">
+          Check
+        </button>
+      </div>
+      <div id="result" class="mt-4 text-gray-700"></div>
+    </section>
+  </div>
+
+  <script>
+ 
+    // Handle the "Check Symptoms" button click
+    document.getElementById('check-symptoms').addEventListener('click', () => {
+      const results = document.getElementById('results');
+      const symptomsExperienced = [];
+      let totalSymptoms = 0;
+
+      // Check which symptoms are selected
+      symptoms.forEach((symptom, index) => {
+        const checkbox = document.getElementById(`symptom-${index}`);
+        if (checkbox.checked) {
+          symptomsExperienced.push(symptom);
+          totalSymptoms++;
+        }
+      });
+
+      // Display the results
+      document.getElementById('symptoms-experienced').innerText =
+        symptomsExperienced.length > 0
+          ? `Symptoms you are experiencing: ${symptomsExperienced.join(', ')}`
+          : "You are not experiencing any symptoms.";
+      document.getElementById('total-symptoms').innerText = `Total symptoms: ${totalSymptoms}`;
+
+      // Provide a recommendation
+      let recommendation = "";
+      if (totalSymptoms === 0) {
+        recommendation = "You are not experiencing any symptoms. Keep up the good health!";
+      } else if (totalSymptoms <= 5) {
+        recommendation = "You are experiencing a few symptoms. Monitor your health and consider consulting a doctor if symptoms persist.";
+      } else {
+        recommendation = "You are experiencing multiple symptoms. It is recommended to consult a healthcare professional as soon as possible.";
+      }
+      document.getElementById('recommendation').innerText = recommendation;
+
+      // Show the results section
+      results.classList.remove('hidden');
+    });
+
+    // Load the JSON data
+    let conditions = [];
+
+    function loadConditions() {
+      fetch('conditions.json')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('HTTP error ' + response.status);
+          }
+          return response.json();
+        })
+        .then(data => {
+          conditions.push(...data.conditions);
+        })
+        .catch(error => {
+          console.error('Error loading conditions:', error);
+        });
+    }
+    loadConditions();
+
+    // Check symptom input
+    function checkSymptom() {
+      let userInput = document.getElementById("symptomInput").value.toLowerCase();
+      let resultDiv = document.getElementById("result");
+      resultDiv.innerHTML = "";
+      let matchedConditions = [];
+      conditions.forEach(condition => {
+        condition.symptoms = condition.symptoms.map(symptom => symptom.toLowerCase());
+        if (condition.symptoms.includes(userInput)) {
+          matchedConditions.push(condition);
+        }
+      });
+
+      if (matchedConditions.length === 0) {
+        resultDiv.innerHTML = "<p class='text-red-500'>No matching conditions found.</p>";
+      } else {
+        matchedConditions.forEach(match => {
+          let conditionDiv = document.createElement("div");
+          conditionDiv.classList.add("mt-4", "p-4", "bg-gray-100", "rounded");
+          conditionDiv.innerHTML = `<h3 class="text-lg font-bold text-blue-600">${match.name}</h3><p>${match.details}</p>`;
+          resultDiv.appendChild(conditionDiv);
+        });
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+{
+    "Diabetes": {
+        "prescription": "Metformin 500mg once daily.",
+        "information": "Diabetes is a chronic condition that occurs when the body cannot effectively use insulin.",
+        "tests": [
+            "Fasting blood glucose test\n1. Normal: 99 mg/dL or below\n2. Prediabetes: 100-125 mg/dL\n3. Diabetes: 126 mg/dL or above",
+            "Hemoglobin A1c test\n1. Normal: below 5.7% (below 100 mg/dL)\n2. Prediabetes: 5.7% to 6.4% (100 to 125 mg/dL)\n3. Diabetes: 6.5% or higher (126 mg/dL or higher)",
+            "Oral glucose tolerance test"
+        ]
+    },
+    "Hypertension": {
+        "prescription": "Lisinopril 10mg once daily.",
+        "information": "Hypertension is a condition in which the blood pressure in the arteries is persistently elevated.",
+        "tests": [
+            "Blood pressure measurement",
+            "Electrocardiogram (ECG)",
+            "Echocardiogram",
+            "Blood tests"
+        ]
+    },
+    "Asthma": {
+        "prescription": "Albuterol inhaler as needed.",
+        "information": "Asthma is a condition in which your airways narrow and swell and may produce extra mucus.",
+        "tests": [
+            "Spirometry",
+            "Peak flow monitoring",
+            "Methacholine challenge test",
+            "Exhaled nitric oxide test"
+        ]
+    },
+    "Arthritis": {
+        "prescription": "Ibuprofen 400mg every 6-8 hours as needed.",
+        "information": "Arthritis is a term often used to mean any disorder that affects joints. Arthritis is extremely common, especially in people older than 50. It causes joint pain, stiffness and inflammation.",
+        "tests": [
+            "X-ray",
+            "MRI",
+            "Blood tests",
+            "CT scan"
+        ]
+    },
+    "Pneumonia": {
+        "prescription": "Azithromycin 500mg on day 1, then 250mg daily for 4 days.",
+        "information": "Pneumonia is an infection that inflames the air sacs in one or both lungs, which may fill with fluid or pus.",
+        "tests": [
+            "Chest X-ray",
+            "Blood tests",
+            "Sputum test",
+            "Pulse oximetry"
+        ]
+    },
+    "Gastroenteritis": {
+        "prescription": "Loperamide 2mg after each loose stool.",
+        "information": "Gastroenteritis is an inflammation of the stomach and intestines, usually due to a viral infection.",
+        "tests": [
+            "Stool test",
+            "Blood tests",
+            "Electrolyte panel"
+        ]
+    },
+    "Flu": {
+        "prescription": "Oseltamivir 75mg twice daily for 5 days.",
+        "information": "The flu is a contagious respiratory illness caused by influenza viruses.",
+        "tests": [
+            "Rapid influenza diagnostic tests (RIDTs)",
+            "RT-PCR test",
+            "Viral culture"
+        ]
+    },
+    "COVID-19": {
+        "prescription": "Remdesivir 200mg on day 1, then 100mg daily for 4 days.",
+        "information": "COVID-19 is an infectious disease caused by the coronavirus SARS-CoV-2.",
+        "tests": [
+            "RT-PCR test",
+            "Antigen test",
+            "Serology test"
+        ]
+    },
+    "Influenza": {
+        "prescription": "Oseltamivir 75mg twice daily for 5 days.",
+        "information": "Influenza is a viral infection that attacks your respiratory system.",
+        "tests": [
+            "Rapid influenza diagnostic tests (RIDTs)",
+            "RT-PCR test",
+            "Viral culture"
+        ]
+    },
+    "Infectious Disease": {
+        "prescription": "Antibiotics as per culture sensitivity.",
+        "information": "Infectious diseases are disorders caused by organisms such as bacteria, viruses, fungi or parasites.",
+        "tests": [
+            "Blood cultures",
+            "Imaging tests",
+            "Biopsy"
+        ]
+    },
+    "Heart Disease": {
+        "prescription": "Aspirin 81mg daily.",
+        "information": "Heart disease refers to various types of conditions that affect the heart.",
+        "tests": [
+            "Electrocardiogram (ECG)",
+            "Echocardiogram",
+            "Stress test",
+            "Coronary angiography"
+        ]
+    },
+    "Kidney Disease": {
+        "prescription": "Lisinopril 10mg once daily.",
+        "information": "Kidney disease refers to a range of conditions that affect kidney function.",
+        "tests": [
+            "Blood tests",
+            "Urine tests",
+            "Imaging tests",
+            "Kidney biopsy"
+        ]
+    },
+    "Liver Disease": {
+        "prescription": "Lactulose 15g orally once daily.",
+        "information": "Liver disease refers to any condition that impairs liver function.",
+        "tests": [
+            "Liver function tests",
+            "Imaging tests",
+            "Liver biopsy"
+        ]
+    },
+    "Malaria": {
+        "prescription": "Artemisinin-based combination therapy (ACT).",
+        "information": "Malaria is a mosquito-borne infectious disease caused by parasitic protozoans.",
+        "tests": [
+            "Blood smear test",
+            "Rapid diagnostic test (RDT)",
+            "Polymerase chain reaction (PCR) test"
+        ]
+    },
+    "Tuberculosis": {
+        "prescription": "Isoniazid 300mg daily.",
+        "information": "Tuberculosis (TB) is a potentially serious infectious disease that mainly affects the lungs.",
+        "tests": [
+            "Tuberculin skin test",
+            "Blood tests",
+            "Chest X-ray",
+            "Sputum test"
+        ]
+    },
+    "Measles": {
+        "prescription": "Vitamin A supplementation.",
+        "information": "Measles is a highly contagious viral disease that causes fever, cough, and a characteristic rash.",
+        "tests": [
+            "Serology test",
+            "Polymerase chain reaction (PCR) test"
+        ]
+    },
+    "HIV": {
+        "prescription": "Antiretroviral therapy (ART).",
+        "information": "HIV is a virus that attacks the body's immune system, specifically the CD4 cells (T cells).",
+        "tests": [
+            "HIV antibody test",
+            "HIV RNA test",
+            "CD4 count test"
+        ]
+    },
+    "Hepatitis": {
+        "prescription": "Antiviral medications as per type.",
+        "information": "Hepatitis is an inflammation of the liver, often caused by a viral infection.",
+        "tests": [
+            "Liver function tests",
+            "Hepatitis virus tests",
+            "Imaging tests"
+        ]
+    },
+    "Cancer": {
+        "prescription": "Chemotherapy as per type.",
+        "information": "Cancer is a disease in which abnormal cells divide without control and can invade nearby tissues.",
+        "tests": [
+            "Biopsy",
+            "Imaging tests",
+            "Blood tests"
+        ]
+    },
+    "Chickenpox": {
+        "prescription": "Acyclovir 800mg five times a day for 7 days.",
+        "information": "Chickenpox is a highly contagious viral infection characterized by an itchy rash and flu-like symptoms.",
+        "tests": [
+            "Clinical examination",
+            "Polymerase chain reaction (PCR) test",
+            "Direct fluorescent antibody (DFA) test"
+        ]
+    },
+    "Depression": {
+        "prescription": "Sertraline 50mg once daily.",
+        "information": "Depression is a mood disorder that causes a persistent feeling of sadness and loss of interest.",
+        "tests": [
+            "Clinical evaluation",
+            "Beck Depression Inventory",
+            "Hamilton Depression Rating Scale"
+        ]
+    },
+    "Anxiety": {
+        "prescription": "Escitalopram 10mg once daily.",
+        "information": "Anxiety disorders are a group of mental health disorders characterized by excessive fear or worry.",
+        "tests": [
+            "Clinical evaluation",
+            "Generalized Anxiety Disorder 7-item (GAD-7) scale",
+            "Beck Anxiety Inventory"
+        ]
+    },
+    "Bipolar Disorder": {
+        "prescription": "Lithium 300mg twice daily.",
+        "information": "Bipolar disorder is a mental health condition that causes extreme mood swings that include emotional highs (mania or hypomania) and lows (depression).",
+        "tests": [
+            "Clinical evaluation",
+            "Mood disorder questionnaires"
+        ]
+    },
+    "Migraine": {
+        "prescription": "Sumatriptan 100mg as needed.",
+        "information": "Migraine is a neurological condition characterized by recurrent, severe headaches often accompanied by nausea and sensitivity to light and sound.",
+        "tests": [
+            "Clinical evaluation",
+            "Headache diaries",
+            "Neurological examination"
+        ]
+    }
+}

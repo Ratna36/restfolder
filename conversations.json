@@ -1,0 +1,77 @@
+{
+  
+    "conversations": [
+      {
+        "question": "Hello",
+        "answer": "Hi, how can I help you?. How are you feeling today"
+      },
+      {
+        "question": "Hii",
+        "answer": "Hi, how can I help you?. How are you feeling today"
+      },
+      {
+        "question": "I am not feeling good today",
+        "answer": "I'm sorry to hear that. Can you tell me more about how you're feeling?"
+      },
+      {
+        "question": "I think i am suffering from fever.",
+        "answer": "I'm sorry to hear that. Have you checked your temperature? If it's high, consider resting and staying hydrated."
+      },
+      {
+        "question": "temerature is above 120 degree and so much pain.",
+        "answer": " That sounds serious. I recommend seeking medical attention immediately. High fever and pain can be signs of a serious condition."
+      },
+      {
+        "question": "What is your purpose",
+        "answer": "I'm here to assist you with any questions or tasks you may have."
+      },
+      {
+        "question": "Can you tell me a joke",
+        "answer": "Why don't scientists trust atoms? Because they make up everything!"
+      },
+      {
+        "question": "I am feeling okay, thank you for asking.",
+        "answer": "It's good to hear that you're feeling okay. Is there anything specific you'd like to talk about?"
+      },
+      {
+        "question":"bye",
+        "answer":"Hava a nice day. I hope your day was going good. see you next time."
+      },
+      {
+        "question": "Have you experienced any symptoms recently",
+        "answer": "No, I haven't experienced any symptoms lately."
+      },
+      {
+        "question": "What should I do if I have a fever?",
+        "answer": "If you have a fever, it's important to stay hydrated, rest, and monitor your temperature. If it persists or gets worse, consult a healthcare professional."
+      },
+      {
+        "question": "Can you help me track my symptoms?",
+        "answer": "Yes, I can help you track your symptoms. Please tell me what symptoms you're experiencing and when they started."
+      },
+      {
+        "question": "What are the common symptoms of the flu?",
+        "answer": "Common symptoms of the flu include fever, chills, muscle aches, cough, congestion, runny nose, headaches, and fatigue."
+      },
+      {
+        "question": "How can I improve my mental health?",
+        "answer": "Improving mental health can involve regular exercise, maintaining a healthy diet, getting enough sleep, practicing mindfulness, and seeking support from friends, family, or a therapist."
+      },
+      {
+        "question": "What should I do in case of an emergency?",
+        "answer": "In case of an emergency, call your local emergency number immediately and follow the instructions provided by the operator."
+      },
+      {
+        "question": "What features does this website offer?",
+        "answer": "This website offers features such as symptom tracking, health tips, and personalized recommendations to help you manage your health."
+      },
+      {
+        "question": "How can I use the symptom tracking feature?",
+        "answer": "To use the symptom tracking feature, log in to your account, navigate to the 'Symptom Tracker' section, and input the symptoms you're experiencing along with the date they started."
+      },
+      {
+        "question": "Can this website help me monitor my health conditions?",
+        "answer": "Yes, this website can help you monitor your health conditions by allowing you to track symptoms, view trends over time, and receive tailored advice based on your inputs."
+      }
+      ]
+  }

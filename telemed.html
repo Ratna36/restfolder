@@ -1,0 +1,456 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Telemedicine Website
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+  </style>
+ </head>
+ <body class="bg-gray-100" style="background-image: url(Screenshot_8-1-2025_193428_.jpeg);">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-lg">
+   <div class="max-w-6xl mx-auto px-4">
+    <div class="flex justify-between">
+     <div class="flex space-x-7">
+      <div>
+       <a class="flex items-center py-4 px-2" href="#">
+        <img alt="Logo of the telemedicine website, a stylized cross with a stethoscope" class="h-8 w-8 mr-2" height="50" src="https://storage.googleapis.com/a1aa/image/dXKT1egf7brudUqzOvewyU0HtS2f18qOn4gmYPlrGspGdNFQB.jpg" width="50"/>
+        <span class="font-semibold text-gray-500 text-lg">
+         TeleMed
+        </span>
+       </a>
+      </div>
+      <div class="hidden md:flex items-center space-x-1">
+       <a class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold" href="dash.html">
+        Home
+       </a>
+       <a class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300" href="#ser">
+        Services
+       </a>
+       <a class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300" href="#doc">
+        Doctors
+       </a>
+       <a class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300" href="#con">
+        Contact
+       </a>
+      </div>
+     </div>
+     <div class="hidden md:flex items-center space-x-3">
+      <a class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300" href="">
+       Log In
+      </a>
+      <a class="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300" href="">
+       Sign Up
+      </a>
+     </div>
+     <div class="md:hidden flex items-center">
+      <button class="outline-none mobile-menu-button">
+       <i class="fas fa-bars">
+       </i>
+      </button>
+     </div>
+    </div>
+   </div>
+  </nav>
+  <div class="hidden mobile-menu">
+   <ul class="">
+    <li>
+     <a class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold" href="dash.html">
+      Home
+     </a>
+    </li>
+    <li>
+     <a class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300" href="#ser">
+      Services
+     </a>
+    </li>
+    <li>
+     <a class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300" href="doc">
+      Doctors
+     </a>
+    </li>
+    <li>
+     <a class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300" href="#con">
+      Contact
+     </a>
+    </li>
+   </ul>
+  </div>
+  <!-- Hero Section -->
+  <div class="bg-white">
+   <div class="max-w-6xl mx-auto px-4 py-16">
+    <div class="flex flex-col md:flex-row items-center">
+     <div class="md:w-1/2">
+      <h1 class="text-4xl font-bold text-gray-800 mb-4">
+       Your Health, Our Priority
+      </h1>
+      <p class="text-gray-600 mb-6">
+       Connect with the best doctors from the comfort of your home. Get professional medical advice, prescriptions, and more.
+      </p>
+    <button id="getStartedBtn" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-400 transition duration-300">
+     Get Started
+    </button>
+    <div id="videoConsultBox" class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center">
+      <div class="bg-white p-6 rounded-lg shadow-lg w-11/12 md:w-1/2">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Video Consultation</h2>
+        <p class="text-gray-600 mb-4">Connect with a doctor via video call.</p>
+        <div class="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg mb-4">
+        <!-- Placeholder for video -->
+        <video id="localVideo" autoplay muted class="w-full h-full"></video>
+      <video id="remoteVideo" autoplay class="w-full h-full"></video>
+    </div>
+        <button id="closeBtn" class="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-400 transition duration-300">
+        Close
+        </button>
+      </div>
+    </div>
+     </div>
+     <div class="md:w-1/2 mt-8 md:mt-0">
+      <img alt="A doctor consulting a patient via a laptop, representing telemedicine services" class="rounded-lg shadow-lg" height="400" src="https://storage.googleapis.com/a1aa/image/fMQNitrbiNTITSWPvQ2mJye790MrYfP8yrpzbTHbIaBYumCoA.jpg" width="600"/>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Services Section -->
+  <div class="bg-gray-100 py-16" id="ser">
+   <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">
+     Our Services
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+     <div class="bg-white p-6 rounded-lg shadow-lg hover:cursor-pointer hover:scale-89 transition duration-300">
+      <img alt="Icon representing online consultations" class="h-16 w-16 mb-4 mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/GRnMBzfg0R2rQiqvNRvIemyftKAARvsV8H2mxOZIt9qrumCoA.jpg" width="100"/>
+      <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center">
+       Online Consultations
+      </h3>
+      <p class="text-gray-600 text-center">
+       Get medical advice from certified doctors through video calls.
+      </p>
+     </div>
+     <div class="bg-white p-6 rounded-lg shadow-lg hover:cursor-pointer hover:scale-89 transition duration-300">
+      <img alt="Icon representing prescription services" class="h-16 w-16 mb-4 mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/JntlcIpcbs4KPZxYe4dpOQns8Q1UftiqGj0hYzZ1hoZWXTBUA.jpg" width="100"/>
+      <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center">
+       Prescriptions
+      </h3>
+      <p class="text-gray-600 text-center">
+       Receive prescriptions directly to your pharmacy or home.
+      </p>
+     </div>
+     <div class="bg-white p-6 rounded-lg shadow-lg hover:cursor-pointer hover:scale-89 transition duration-300">
+      <img alt="Icon representing health monitoring" class="h-16 w-16 mb-4 mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/R2YJ6lJlPb4LLpBk2nSe7BY8zNwwpl1KowAPLSVWfQfxumCoA.jpg" width="100"/>
+      <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center">
+       Health Monitoring
+      </h3>
+      <p class="text-gray-600 text-center">
+       Track your health metrics and get personalized advice.
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Doctors Section -->
+  <div class="bg-white py-16" id="doc">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">
+        Meet Our Doctors
+      </h2>
+      <!-- Search Bar -->
+      <div class="mb-8">
+        <input
+          type="text"
+          id="doctorSearch"
+          placeholder="Search for a doctor by name or specialization..."
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-green-500"
+        />
+      </div>
+      <div id="doctorList" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:cursor-pointer hover:scale-105 transition duration-300">
+          <img
+            alt="Portrait of Dr.Anubhuti jain, a Gynecologist"
+            class="h-24 w-24 rounded-full mx-auto mb-4"
+            height="150"
+            src="1745328884954.jpg"
+            width="150"
+          />
+          <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center">
+            Dr.Anubhuti jain
+          </h3>
+          <p class="text-green-500 text-center">
+            Gynecologist
+          </p>
+          <p class="text-gray-600 text-center">
+            MBBS, DGO, DNB, OBS & GYNAC, IAGE fellow laparoscopy Mumbai, over 16 year experience.
+          </p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:cursor-pointer hover:scale-105 transition duration-300">
+          <img
+            alt="Portrait of Dr. Krishna Chugh, a pediatrician"
+            class="h-24 w-24 rounded-full mx-auto mb-4"
+            height="150"
+            src="1745328884950.jpg"
+            width="150"
+          />
+          <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center">
+            Dr. Krishna Chugh
+          </h3>
+          <p class="text-green-500 text-center">
+            Pediatrician
+          </p>
+          <p class="text-gray-600 text-center">
+            MBBS, MD - Pediatrics - 43 Years Overall Experience 
+          </p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:cursor-pointer hover:scale-105 transition duration-300">
+          <img
+            alt="Portrait of Dr.Swapnil Garde, a cardiologist"
+            class="h-24 w-24 rounded-full mx-auto mb-4"
+            height="150"
+            src="1745328023940.jpg"
+            width="150"
+          />
+          <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center">
+            Dr. Swapnil Garde
+          </h3>
+          <p class="text-green-500 text-center">
+            Cardiologist
+          </p>
+          <p class="text-gray-600 text-center">
+            MBBS, MD, DM, EECC, 12 Years Overall Experience 
+          </p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:cursor-pointer hover:scale-105 transition duration-300">
+          <img
+            alt="Portrait of Dr. Nirendra Kumar rai, a neurologist"
+            class="h-24 w-24 rounded-full mx-auto mb-4"
+            height="150"
+            src="Screenshot 2025-04-22 192757.png"
+            width="150"
+          />
+          <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center">
+            Dr.  Nirendra Kumar Rai
+          </h3>
+          <p class="text-green-500 text-center">
+            Neurologist
+          </p>
+          <p class="text-gray-600 text-center">
+            MD, DM, FINR, 18 Years Overall Experience
+          </p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:cursor-pointer hover:scale-105 transition duration-300">
+          <img
+            alt="Portrait of Dr. Akhilesh Agarwal, a dermatologist"
+            class="h-24 w-24 rounded-full mx-auto mb-4"
+            height="150"
+            src="1745328884945.jpg"
+            width="150"
+          />
+          <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center">
+            Dr.Akhilesh Agarwal
+          </h3>
+          <p class="text-green-500 text-center">
+            Dermatologist
+          </p>
+          <p class="text-gray-600 text-center">
+            DDVL, DNB (Dermatology & Venerology), 19 Years Overall Experience
+          </p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:cursor-pointer hover:scale-105 transition duration-300">
+          <img
+            alt="Portrait of Dr. Manoj Nagar, an orthopedic surgeon"
+            class="h-24 w-24 rounded-full mx-auto mb-4"
+            height="150"
+            src="Screenshot 2025-04-22 193347.png"
+            width="150"
+          />
+          <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center">
+            Dr. Manoj Nagar
+          </h3>
+          <p class="text-green-500 text-center">
+            Orthopedic Surgeon
+          </p>
+          <p class="text-gray-600 text-center">
+          MBBS, MS, DNB Orthopeadics, 20 Years Overall Experience
+        </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const doctorSearch = document.getElementById("doctorSearch");
+    const doctorList = document.getElementById("doctorList");
+
+    doctorSearch.addEventListener("input", () => {
+      const searchQuery = doctorSearch.value.toLowerCase();
+      const doctors = doctorList.querySelectorAll("div");
+
+      doctors.forEach((doctor) => {
+        const name = doctor.querySelector("h3").textContent.toLowerCase();
+        const specialization = doctor.querySelector("p").textContent.toLowerCase();
+
+        if (name.includes(searchQuery) || specialization.includes(searchQuery)) {
+          doctor.style.display = "block";
+        } else {
+          doctor.style.display = "none";
+        }
+      });
+    });
+  </script>
+  <!-- Contact Section -->
+  <div class="bg-gray-100 py-16" id="con">
+   <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">
+     Contact Us
+    </h2>
+    <div class="flex flex-col md:flex-row items-center">
+     <div class="md:w-1/2">
+      <img alt="A person using a laptop and phone to contact customer support" class="rounded-lg shadow-lg" height="400" src="https://storage.googleapis.com/a1aa/image/0pUhPM4fRSzpTaDYYDVFpEFOoOpDaPPXOezTrsumc0lKXTBUA.jpg" width="600"/>
+     </div>
+     <div class="md:w-1/2 mt-8 md:mt-0 md:pl-8">
+      <form>
+       <div class="mb-4">
+        <label class="block text-gray-700 font-semibold mb-2" for="name">
+         Name
+        </label>
+        <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-green-500" id="name" type="text"/>
+       </div>
+       <div class="mb-4">
+        <label class="block text-gray-700 font-semibold mb-2" for="email">
+         Email
+        </label>
+        <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-green-500" id="email" type="email"/>
+       </div>
+       <div class="mb-4">
+        <label class="block text-gray-700 font-semibold mb-2" for="message">
+         Message
+        </label>
+        <textarea class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-green-500" id="message"></textarea>
+       </div>
+       <button class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-400 transition duration-300" type="submit">
+        Send Message
+       </button>
+      </form>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Footer -->
+  <footer class="bg-white py-8">
+   <div class="max-w-6xl mx-auto px-4">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+     <div class="text-gray-600 mb-4 md:mb-0">
+      © 2023 TeleMed. All rights reserved.
+     </div>
+     <div class="flex space-x-4">
+      <a class="text-gray-600 hover:text-green-500 transition duration-300" href="#">
+       <i class="fab fa-facebook-f">
+       </i>
+      </a>
+      <a class="text-gray-600 hover:text-green-500 transition duration-300" href="#">
+       <i class="fab fa-twitter">
+       </i>
+      </a>
+      <a class="text-gray-600 hover:text-green-500 transition duration-300" href="#">
+       <i class="fab fa-instagram">
+       </i>
+      </a>
+      <a class="text-gray-600 hover:text-green-500 transition duration-300" href="#">
+       <i class="fab fa-linkedin-in">
+       </i>
+      </a>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <script>
+// JavaScript for mobile menu toggle
+  const btn = document.querySelector("button.mobile-menu-button");
+const menu = document.querySelector(".mobile-menu");
+const getStartedBtn = document.getElementById("getStartedBtn");
+const videoConsultBox = document.getElementById("videoConsultBox");
+const localVideo = document.getElementById("localVideo");
+const remoteVideo = document.getElementById("remoteVideo");
+const closeBtn = document.getElementById("closeBtn");
+
+let localStream;
+let peerConnection;
+
+const config = {
+  iceServers: [{ urls: 'stun:stun.l.google.com:19302' }]
+};
+
+const signalingServer = new WebSocket('ws://localhost:8080');
+
+signalingServer.onmessage = async message => {
+  const data = JSON.parse(message.data);
+  if (data.offer) {
+    await peerConnection.setRemoteDescription(new RTCSessionDescription(data.offer));
+    const answer = await peerConnection.createAnswer();
+    await peerConnection.setLocalDescription(answer);
+    signalingServer.send(JSON.stringify({ answer }));
+  } else if (data.answer) {
+    await peerConnection.setRemoteDescription(new RTCSessionDescription(data.answer));
+  } else if (data.candidate) {
+    await peerConnection.addIceCandidate(new RTCIceCandidate(data.candidate));
+  }
+};
+
+async function startVideoCall() {
+  try {
+    localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+    localVideo.srcObject = localStream;
+
+    peerConnection = new RTCPeerConnection(config);
+
+    localStream.getTracks().forEach(track => peerConnection.addTrack(track, localStream));
+
+    peerConnection.ontrack = event => {
+      remoteVideo.srcObject = event.streams[0];
+    };
+
+    peerConnection.onicecandidate = event => {
+      if (event.candidate) {
+        signalingServer.send(JSON.stringify({ candidate: event.candidate }));
+      }
+    };
+
+    const offer = await peerConnection.createOffer();
+    await peerConnection.setLocalDescription(offer);
+    signalingServer.send(JSON.stringify({ offer }));
+  } catch (error) {
+    console.error('Error accessing media devices:', error);
+  }
+}
+
+getStartedBtn.addEventListener("click", () => {
+  videoConsultBox.classList.remove("hidden");
+  startVideoCall();
+});
+
+closeBtn.addEventListener("click", () => {
+  if (peerConnection) peerConnection.close();
+  peerConnection = null;
+  if (localStream) {
+    localStream.getTracks().forEach(track => track.stop());
+  }
+  localVideo.srcObject = null;
+  remoteVideo.srcObject = null;
+  videoConsultBox.classList.add("hidden");
+});
+
+btn.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+});
+
+ </script>
+ </body>
+</html>

@@ -1,0 +1,129 @@
+{
+  "conditions":[
+    {
+      "name": "Influenza (Flu)",
+      "details": "Caused by influenza viruses, highly contagious respiratory illness.",
+      "symptoms": [
+        "fever,cold",
+        "cough",
+        "sore throat",
+        "muscle aches",
+        "fatigue",
+        "headache",
+        "runny or stuffy nose"
+      ]
+    },
+    {
+      "name": "Common Cold",
+      "details": "Caused by various viruses, most commonly rhinoviruses.",
+      "symptoms": [
+        "Runny or stuffy nose",
+        "Sneezing",
+        "Sore throat",
+        "Cough",
+        "Mild body aches",
+        "Mild headache"
+      ]
+    },
+    {
+      "name": "Pneumonia",
+      "details": "Inflammation of the air sacs in one or both lungs, usually caused by infection.",
+      "symptoms": [
+        "Fever",
+        "Chills",
+        "Cough with phlegm or pus",
+        "Difficulty breathing",
+        "Chest pain",
+        "Fatigue"
+      ]
+    },
+    {
+      "name": "Diabetes Mellitus",
+      "details": "Chronic condition affecting how your body turns food into energy.",
+      "symptoms": [
+        "Frequent urination",
+        "Increased thirst",
+        "Extreme hunger",
+        "Unexplained weight loss",
+        "Fatigue",
+        "Blurred vision"
+      ]
+    },
+    {
+      "name": "Hypertension (High Blood Pressure)",
+      "details": "Persistent elevation of blood pressure in the arteries.",
+      "symptoms": [
+        "Often asymptomatic",
+        "Severe hypertension can cause headaches",
+        "Shortness of breath",
+        "Nosebleeds",
+        "Dizziness"
+      ]
+    },
+    {
+      "name": "Asthma",
+      "details": "Chronic respiratory condition causing inflammation and narrowing of the airways.",
+      "symptoms": [
+        "Wheezing",
+        "Shortness of breath",
+        "Chest tightness",
+        "Coughing, especially at night or early morning"
+      ]
+    },
+    {
+      "name": "Gastroenteritis (Stomach Flu)",
+      "details": "Inflammation of the stomach and intestines, usually caused by viral or bacterial infection.",
+      "symptoms": [
+        "Nausea",
+        "Vomiting",
+        "Diarrhea",
+        "Abdominal cramps",
+        "Fever",
+        "Headache"
+      ]
+    },
+    {
+      "name": "Urinary Tract Infection (UTI)",
+      "details": "Infection in any part of the urinary system, including the kidneys, bladder, ureters, and urethra.",
+      "symptoms": [
+        "Pain or burning sensation during urination",
+        "Frequent urination",
+        "Cloudy or bloody urine",
+        "Pelvic pain"
+      ]
+    },
+    {
+      "name": "Arthritis",
+      "details": "Inflammation of one or more joints, causing pain and stiffness. Arthritis is a disease that causes damage in your joints. Joints are places in your body where two bones meet. Osteoarthritis is the most common type. Studies have found that around half of all adults will develop osteoarthritis at some point.",
+      "symptoms": [
+        "Joint pain","skin discoloration",
+        "Stiffness",
+        "Swelling(Inflammation)","a feeling of heat or warmth in the joint",
+        "Redness",
+        "Decreased range of motion"
+      ]
+    },
+    {
+      "name": "Migraine",
+      "details": "Neurological condition characterized by recurrent, severe headaches often accompanied by other symptoms.A migraine headache is caused by abnormal brain activity. This activity can be triggered by many things. But the exact chain of events remains unclear. Most medical experts believe the attack begins in the brain and involves nerve pathways and chemicals. The changes affect blood flow in the brain and surrounding tissues",
+      "symptoms": [
+        "Intense throbbing or pulsing headache, often on one side of the head",
+        "Sensitivity to light and sound",
+        "Nausea",
+        "Vomiting"
+      ]
+    },
+    {
+      "name":"Malaria",
+      "details":"Malaria is a life-threatening disease spread to humans by some types of mosquitoes. It is mostly found in tropical countries. It is preventable and curable.",
+      "symptoms":[
+        "extreme tiredness and fatigue ",
+"impaired consciousness",
+"multiple convulsions",
+"difficulty breathing",
+"dark or bloody urine",
+"jaundice (yellowing of the eyes and skin)", 
+"abnormal bleeding."
+      ]
+    }
+  ]}
